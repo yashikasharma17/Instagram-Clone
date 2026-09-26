@@ -25,7 +25,7 @@ const Profile = () => {
     setActiveTab(tab);
   }
   const displayedpost=activeTab==="posts"? userProfile?.posts : userProfile?.bookmark;
-  const USER_API_END_POINT = "http://localhost:8000/api/v1/user"; 
+  const USER_API_END_POINT = "https://instagram-clone-3-cfe5.onrender.com/api/v1/user"; 
   const handleFollowUnfollow = async () => {
   try {
     const res = await axios.post(

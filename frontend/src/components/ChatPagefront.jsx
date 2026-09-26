@@ -21,7 +21,7 @@ const ChatPage = () => {
   const dispatch=useDispatch();
   const messagehandler=async(receiverid)=>{
 try {
-  const res=await axios.post(`http://localhost:8000/api/v1/message/send/${receiverid}`,{textmessage},{
+  const res=await axios.post(`https://instagram-clone-3-cfe5.onrender.com/api/v1/message/send/${receiverid}`,{textmessage},{
     headers:{
       'Content-type':'application/json'
     },

@@ -10,7 +10,7 @@ import {
 import { setAuthUser } from "@/redux/authslice";
 // adjust path if needed
 
-const USER_API_END_POINT = "http://localhost:8000/api/v1/user"; // adjust to your setup
+const USER_API_END_POINT = "https://instagram-clone-3-cfe5.onrender.com/api/v1/user"; // adjust to your setup
 
 const SuggestedUsers = () => {
   const dispatch = useDispatch();

@@ -26,7 +26,7 @@ app.use(cookieParser());
 app.use(urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname,"/frontend/dist")));
 const corsOptions={
-    origin:"http://localhost:5173",
+    origin:process.env.URL,
     credentials:true
 }
 app.use(cors(corsOptions));

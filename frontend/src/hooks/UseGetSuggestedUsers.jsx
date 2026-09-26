@@ -10,7 +10,7 @@ const useGetSuggestedUsers = () => {
     const fetchSuggestedUsers = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:8000/api/v1/user/suggestedUsers",
+          "https://instagram-clone-3-cfe5.onrender.com/api/v1/user/suggestedUsers",
           {
             withCredentials: true,
           }

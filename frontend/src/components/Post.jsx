@@ -37,7 +37,7 @@ const [comment,setcomment]=useState(post.comment);
      const likeOrDislikeHandler = async () => {
         try {
             const action = liked ? 'dislike' : 'like';
-            const res = await axios.get(`http://localhost:8000/api/v1/post/${post._id}/${action}`,
+            const res = await axios.get(`https://instagram-clone-3-cfe5.onrender.com/api/v1/post/${post._id}/${action}`,
                  { withCredentials: true });
             console.log(res.data);
             if (res.data.success) {
@@ -63,7 +63,7 @@ const [comment,setcomment]=useState(post.comment);
     const commenthandler=async()=>{
         try
         {
-const res=await axios.post(`http://localhost:8000/api/v1/post/${post._id}/comment`,{text},{
+const res=await axios.post(`https://instagram-clone-3-cfe5.onrender.com/api/v1/post/${post._id}/comment`,{text},{
     headers:{
         'Content-Type': 'application/json'
     },withCredentials:true});
@@ -89,7 +89,7 @@ if(res.data.success){
     }
     const deletepost=async ()=>{
         try{
-const res=await axios.delete(`http://localhost:8000/api/v1/post/delete/${post?._id}`,{withCredentials:true});
+const res=await axios.delete(`https://instagram-clone-3-cfe5.onrender.com/api/v1/post/delete/${post?._id}`,{withCredentials:true});
 if(res.data.success){
     
     const updatedpost=posts.filter((p)=>p?._id!==post?._id);
@@ -108,7 +108,7 @@ if(res.data.success){
     const bookmarkHandler = async () => {
         try {
             const res = await axios.post(
-                `http://localhost:8000/api/v1/post/bookmark/${post?._id}`,
+                `https://instagram-clone-3-cfe5.onrender.com/api/v1/post/bookmark/${post?._id}`,
                 {},
                 { withCredentials: true }
             );
