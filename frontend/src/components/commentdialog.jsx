@@ -9,7 +9,7 @@ import Comments from './comments'
 import axios from 'axios'
 import { toast } from 'sonner'
 import {setPosts,setSelectedPost} from '../redux/postslice'
-import {map} from 'Lodash';
+
 
 
 const Commentdialog = ({open,setopen}) => {//setopen and open are props passed from posts component
