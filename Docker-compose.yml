@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    container_name: insta-clone
+    ports:
+      - "8000:8000"
+    environment:
+      MONGO_URI: "mongodb+srv://yashikasharma1702_db_user:Mrgrey7171@insta1.j4wx01q.mongodb.net/?appName=insta1"
+      SECRET_KEY: "yashika1702"
+      API_KEY: "433675369334273"
+      API_SECRET: "2xFLl_ULcmxIoPx0jzkbVaPH-5U"
+      CLOUD_NAME: "dbucbtbmm"
+      URL: "https://instagram-clone-3-cfe5.onrender.com"
+    networks:
+      - app_network
+
+networks:
+  app_network:
